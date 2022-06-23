@@ -30,7 +30,7 @@
                 var searchTerm = event.currentTarget.value;
                 this.setState({ spinner: true });
 
-                window.optly.get(`search?query=${searchTerm}&fullsearch=true&type=experiment&type=feature`, (res) => {
+                window.optly.get(`search?query=${searchTerm}&fullsearch=true&type=experiment&type=feature&type=page`, (res) => {
                     this.setState({ searchResults: res });
                     console.log(this.state.searchResults)
                     this.setState({ spinner: false });
