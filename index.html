@@ -32,7 +32,7 @@
 
                 window.optly.get(`search?query=${searchTerm}&fullsearch=true&type=experiment&type=feature&type=page`, (res) => {
                     this.setState({ searchResults: res });
-                    console.log(this.state.searchResults)
+                    console.log(res)
                     this.setState({ spinner: false });
                 });
             }
